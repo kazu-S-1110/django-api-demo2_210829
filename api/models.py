@@ -2,9 +2,10 @@ import uuid
 from django.db import models
 
 
-class FavoriteUrls(models.Model):
+class FavoriteUrl(models.Model):
     class Meta:
-        db_table = 'favorite_urls'
+        verbose_name_plural = "お気に入りリスト"  # 管理画面のモデル名にSが付くのを防ぐ。
+        db_table = 'favorite_url'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=30)

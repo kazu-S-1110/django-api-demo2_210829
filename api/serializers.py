@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from .models import FavoriteUrls
+from .models import FavoriteUrl
 
 
 class FavoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = FavoriteUrls
+        model = FavoriteUrl
         fields = ["id", "title", "url"]

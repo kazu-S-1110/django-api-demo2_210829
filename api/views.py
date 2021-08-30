@@ -1,10 +1,10 @@
 from rest_framework import viewsets
 from django.shortcuts import render
 
-from .models import FavoriteUrls
+from .models import FavoriteUrl
 from .serializers import FavoSerializer
 
 
 class FavoViewset(viewsets.ModelViewSet):
-    queryset = FavoriteUrls.objects.all()
+    queryset = FavoriteUrl.objects.all()
     serializer_class = FavoSerializer
