@@ -6,4 +6,4 @@ from .models import FavoriteUrl
 class FavoSerializer(serializers.ModelSerializer):
     class Meta:
         model = FavoriteUrl
-        fields = ["id", "title", "url"]
+        fields = ["id", "title", "url", "created_at"]
